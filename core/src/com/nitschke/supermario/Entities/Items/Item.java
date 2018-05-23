@@ -1,4 +1,4 @@
-package com.nitschke.supermario.Sprites.Items;
+package com.nitschke.supermario.Entities.Items;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -7,23 +7,20 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.nitschke.supermario.MarioGame;
 import com.nitschke.supermario.Screens.PlayScreen;
-import com.nitschke.supermario.Sprites.Mario;
 
-/**
- * Created by brentaureli on 9/24/15.
- */
+
 public abstract class Item extends Sprite {
     protected PlayScreen screen;
     protected World world;
-    protected Vector2 velocity;
-    protected boolean toDestroy;
-    protected boolean destroyed;
-    protected Body body;
+    Vector2 velocity;
+    private boolean setToDestroy;
+    private boolean destroyed;
+    Body b2body;
 
-    public Item(PlayScreen screen, float x, float y){
+    Item(PlayScreen screen, float x, float y){
         this.screen = screen;
         this.world = screen.getWorld();
-        toDestroy = false;
+        setToDestroy = false;
         destroyed = false;
 
         setPosition(x, y);
@@ -32,12 +29,14 @@ public abstract class Item extends Sprite {
     }
 
     public abstract void defineItem();
-    public abstract void use(Mario mario);
+//    public abstract void use(Mario mario);
+//    public abstract void use();
 
     public void update(float dt){
-        if(toDestroy && !destroyed){
-            world.destroyBody(body);
+        if(setToDestroy && !destroyed){
+            world.destroyBody(b2body);
             destroyed = true;
+            b2body = null;      // TODO: b2body = null for debug. (null-ptr exception)
         }
     }
 
@@ -46,9 +45,14 @@ public abstract class Item extends Sprite {
             super.draw(batch);
     }
 
-    public void destroy(){
-        toDestroy = true;
+    public boolean isDestroyed(){
+        return destroyed;
     }
+
+    public void setToDestroy(){
+        setToDestroy = true;
+    }
+
     public void reverseVelocity(boolean x, boolean y){
         if(x)
             velocity.x = -velocity.x;

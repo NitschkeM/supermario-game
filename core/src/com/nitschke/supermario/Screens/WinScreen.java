@@ -13,12 +13,19 @@ import com.nitschke.supermario.MarioGame;
 import com.nitschke.supermario.Tools.ScreenManager;
 
 
-public class GameOverScreen extends BaseScreen {
-    private Stage stage;
 
-    public GameOverScreen(MarioGame game){
+public class WinScreen extends BaseScreen {
+
+
+    private Stage stage;
+    private int score;
+
+    public WinScreen(MarioGame game, int score){
         super(game);
+        this.score = score;
+
         initialize();
+        System.out.println("Creating win screen, recieved score: " + score);
     }
 
     private void initialize() {
@@ -31,10 +38,13 @@ public class GameOverScreen extends BaseScreen {
         table.center();
         table.setFillParent(true);
 
-        Label gameOverLabel = new Label("GAME OVER", font);
+        Label winMessageLabel = new Label("Congratulations, you win.", font);
+        Label scoreLabel = new Label("Score: " + score, font);
         Label playAgainLabel = new Label("Go To Menu: Click Something", font);
 
-        table.add(gameOverLabel).expandX();
+        table.add(winMessageLabel).expandX();
+        table.row();
+        table.add(scoreLabel).expandX().padTop(10f);
         table.row();
         table.add(playAgainLabel).expandX().padTop(10f);
 
@@ -59,4 +69,5 @@ public class GameOverScreen extends BaseScreen {
     public void dispose() {
         stage.dispose();
     }
+
 }

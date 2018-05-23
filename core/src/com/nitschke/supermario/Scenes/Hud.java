@@ -12,9 +12,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.nitschke.supermario.MarioGame;
 
-/**
- * Created by brentaureli on 8/17/15.
- */
+
 public class Hud implements Disposable {
 
     //Scene2D.ui Stage and its own Viewport for HUD
@@ -25,27 +23,32 @@ public class Hud implements Disposable {
     private Integer worldTimer;
     private boolean timeUp; // true when the world timer reaches 0
     private float timeCount;
-    private static Integer score;
+
+    // TODO: I see no reason for the static score or Score Label.
+//    private static Integer score;
+    private Integer score;
 
     //Scene2D widgets
     private Label countdownLabel;
-    private static Label scoreLabel;
+
+//    private static Label scoreLabel;
+    private Label scoreLabel;
     private Label timeLabel;
     private Label levelLabel;
     private Label worldLabel;
     private Label marioLabel;
 
-    public Hud(SpriteBatch sb){
+    public Hud(SpriteBatch spriteBatch){
         //define our tracking variables
         worldTimer = 300;
         timeCount = 0;
-        score = 0;
+         score = 0;
 
 
         //setup the HUD viewport using a new camera seperate from our gamecam
         //define our stage using that viewport and our games spritebatch
         viewport = new FitViewport(MarioGame.V_WIDTH, MarioGame.V_HEIGHT, new OrthographicCamera());
-        stage = new Stage(viewport, sb);
+        stage = new Stage(viewport, spriteBatch);
 
         //define a table used to organize our hud's labels
         Table table = new Table();
@@ -90,10 +93,14 @@ public class Hud implements Disposable {
         }
     }
 
-    public static void addScore(int value){
+//    public static void addScore(int value){
+    public void addScore(int value){
         score += value;
         scoreLabel.setText(String.format("%06d", score));
     }
+
+    public Integer getScore(){return score;}
+//    public static Integer getScore(){return score;}
 
     @Override
     public void dispose() { stage.dispose(); }

@@ -1,10 +1,8 @@
-package com.nitschke.supermario.Sprites.Items;
+package com.nitschke.supermario.Entities.Items;
 
 import com.badlogic.gdx.math.Vector2;
 
-/**
- * Created by brentaureli on 9/24/15.
- */
+
 public class ItemDef {
     public Vector2 position;
     public Class<?> type;

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.3" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextobjectid="41">
+ <tileset firstgid="1" source="tileset_gutter.tsx"/>
+ <layer name="Background Color" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztwzEJAAAMA7Ay/4bqrir2JZBeUlVVVVVVVVVVVVVV1ccDxULniQ==
+  </data>
+ </layer>
+ <layer name="Graphic Layer" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztlE0SATEQRntmVtwAuyy5AW7ADVyBG6jCKbHCLbDSCytlfjozk3SS71V9u6SqO90vRAAAALRyyImOnFPuu5Kw2GS+KwiHM+/WhXMV7JjNHW3E0EOs7OFvY568vy/OW7DHNnfa0IdrrntIkVFBNOZMCtk9+BsXtq7d+Pyd84jMUVsvXDPn+hacJfwFijHfuMLWizK0/QfwF7jCkMxf1643oev/oC3wN14GPNuhkvkakvkrdT1V4G+8THm2MwXz/XW3zkmp6ykDf/2y4vdf9zQDDf7+c7fKSanrqQN//bLl99/B38rzoBz46xf4W38elBPC+2RKE0KNXfcZe69I9/kArnEuWA==
+  </data>
+ </layer>
+ <objectgroup name="Ground">
+  <object id="1" x="0" y="192" width="608" height="16"/>
+  <object id="2" x="656" y="192" width="880" height="16"/>
+  <object id="8" x="1600" y="192" width="1264" height="16"/>
+  <object id="10" x="2864" y="192" width="848" height="16"/>
+  <object id="11" x="3712" y="192" width="128" height="16"/>
+  <object id="30" x="1776" y="144" width="96" height="48"/>
+  <object id="31" x="1840" y="80" width="32" height="64"/>
+  <object id="32" x="1792" y="128" width="48" height="16"/>
+  <object id="33" x="1808" y="112" width="32" height="16"/>
+  <object id="34" x="1824" y="96" height="16"/>
+  <object id="35" x="2016" y="96" width="32" height="96"/>
+  <object id="36" x="1968" y="144" width="48" height="48"/>
+  <object id="37" x="1984" y="128" width="32" height="16"/>
+  <object id="38" x="2000" y="112" width="16" height="16"/>
+  <object id="39" x="3184" y="176" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup name="Pipes">
+  <object id="13" x="880" y="144" width="32" height="48"/>
+  <object id="15" x="1248" y="112" width="32" height="80"/>
+ </objectgroup>
+ <objectgroup name="Coins"/>
+ <objectgroup name="Bricks"/>
+ <objectgroup name="Goombas">
+  <object id="20" x="992" y="176" width="16" height="16"/>
+  <object id="24" x="1920" y="176" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup name="Turtles">
+  <object id="21" x="1152" y="176" width="16" height="16"/>
+  <object id="23" x="480" y="176" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup name="Win Condition Layer">
+  <object id="40" x="3188" y="25" width="8" height="152"/>
+ </objectgroup>
+</map>

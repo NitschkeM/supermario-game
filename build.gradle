@@ -2,13 +2,17 @@ buildscript {
     
 
     repositories {
-        mavenLocal()
-        mavenCentral()
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+//        mavenLocal()
+//        mavenCentral()
+//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         jcenter()
     }
     dependencies {
+//        classpath 'com.android.tools.build:gradle:4.7'
+//        classpath 'com.android.tools.build:gradle:4.4'
+//        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.android.tools.build:gradle:2.2.0'
+
         
 
     }
@@ -33,6 +37,7 @@ allprojects {
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+//        google()
     }
 }
 
