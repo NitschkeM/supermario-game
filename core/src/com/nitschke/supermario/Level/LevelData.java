@@ -34,14 +34,14 @@ public enum LevelData {
     static {
         // LEVEL_1 has 8 pipes and 5 sub-levels.
         LEVEL_1.targetPipes = new LD_PI[] {
-                new LD_PI(LEVEL_1, 1),
-                new LD_PI(LEVEL_2, 1),
+                new LD_PI(LEVEL_1, 2),
+                new LD_PI(LEVEL_3, 0),
                 null,
-                new LD_PI(LEVEL_2, 0),
-                new LD_PI(LEVEL_1, 5),
-                new LD_PI(LEVEL_2, 1),
+                new LD_PI(LEVEL_1, 7),
+                new LD_PI(LEVEL_3, 0),
+                new LD_PI(LEVEL_3, 0),
                 null,
-                new LD_PI(LEVEL_1, 0),
+                new LD_PI(LEVEL_3, 0),
         };
         // LEVEL_2 has 2 pipes and 2 sub-levels.
         LEVEL_2.targetPipes = new LD_PI[] {
@@ -55,7 +55,7 @@ public enum LevelData {
                 new LD_PI(LEVEL_3, 3),      // Next pipe in row.
                 new LD_PI(LEVEL_3, 0),      // First pipe in row.
                 new LD_PI(LEVEL_3, 11),     // To Coins and enemies     (Fifth pipe, index 4)
-                new LD_PI(LEVEL_3, 13),     // to Win flag              (Sixth pipe, index 4)
+                new LD_PI(LEVEL_3, 13),     // to Win flag              (Sixth pipe, index 5)
                 null,
                 new LD_PI(LEVEL_1, 0),      // To Level 1
                 new LD_PI(LEVEL_2, 0),      // To Level 2          9'th pipe (index 8), last in row at start.

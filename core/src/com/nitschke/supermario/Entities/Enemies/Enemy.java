@@ -114,8 +114,8 @@ public abstract class Enemy  {
         //Create the head shape;
         PolygonShape head = new PolygonShape();
         Vector2[] vertice = new Vector2[4];
-        vertice[0] = new Vector2(-5, 8).scl(1 / MarioGame.PPM);
-        vertice[1] = new Vector2(5, 8).scl(1 / MarioGame.PPM);
+        vertice[0] = new Vector2(-4, 8).scl(1 / MarioGame.PPM);
+        vertice[1] = new Vector2(4, 8).scl(1 / MarioGame.PPM);
 //        vertice[2] = new Vector2(-5.3f, 3.3f).scl(1 / MarioGame.PPM);
 //        vertice[3] = new Vector2(5.3f, 3.3f).scl(1 / MarioGame.PPM);
         vertice[2] = new Vector2(-2.3f, 3).scl(1 / MarioGame.PPM);

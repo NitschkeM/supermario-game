@@ -142,7 +142,7 @@ public class PlayScreen extends BaseScreen {
         b2World.setContactListener(new WorldContactListener(this));
 
         // TODO: Activate marioMusic
-        game.getAssetManager().playMarioMusic();
+//        game.getAssetManager().playMarioMusic();
     }
 
     @Override
